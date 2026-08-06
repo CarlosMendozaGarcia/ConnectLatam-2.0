@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cinzel, Cinzel_Decorative, Marcellus, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import Header from "@/shared/layout/Header";
+import Footer from "@/shared/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const cinzel = Cinzel({
+  variable:"--font-headings",
+  subsets:["latin"]
+})
+
+const cinzelDecorative = Cinzel_Decorative({
+  variable:"--font-display",
+  weight: "400",
+  subsets:["latin"]
+})
+const marcellus = Marcellus({
+  variable:"--font-ui",
+  weight: "400",
+  subsets:["latin"]
+})
+const cormorantGaramond = Cormorant_Garamond({
+  variable:"--font-body",
+  subsets:["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +38,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex flex-col min-h-dvh relative ${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
       >
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
