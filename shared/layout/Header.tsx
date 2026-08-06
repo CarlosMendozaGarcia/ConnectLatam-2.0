@@ -1,9 +1,16 @@
 import NavBar from "../components/NavBar";
 
-export default function Header (){
-    return <header className=" h-[10dvh] w-full grid grid-cols-3 items-center px-4 z-10 ">
-        <div>Logo</div>
-        <NavBar/>
-        <div className="justify-self-end">Buttons</div>
+
+export default function Header() {
+    return <header className=" h-[10dvh] w-full  px-4 z-10 ">
+        <div className="hidden lg:grid lg:grid-cols-3 lg:items-center h-full w-full">
+            <div>Logo</div>
+            <NavBar />
+            <div className="justify-self-end">Buttons</div>
+        </div>
+        <div className="flex justify-between items-center h-full w-full lg:hidden ">
+            <div>Logo</div>
+            <div>Menu</div>
+        </div>
     </header>
 }
