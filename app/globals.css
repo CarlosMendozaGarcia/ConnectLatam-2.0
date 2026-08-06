@@ -7,6 +7,14 @@
   --secondary:#ADA6E8;
 }
 
+[data-theme='dark'] {
+  --background:#290000;
+  --foreground:#F7EBDF;
+  --primary:#FF8D85;
+  --secondary:#A30000;
+}
+
+
 @theme inline {
   /* Colores */
   --color-background: var(--background);
@@ -24,13 +32,22 @@
   --text-display: clamp(1rem, calc(2rem + 4dvw), 9rem);
 }
 
-[data-theme='dark'] {
-  --background:#290000;
-  --foreground:#F7EBDF;
-  --primary:#FF8D85;
-  --secondary:#A30000;
+
+@utility button-primary{
+  background: var(--primary);
+  color: var(--background);
+  border-radius: 2px;
 }
 
+@utility button-secondary{
+  color: var(--primary);
+  border: 2px solid;
+  border-radius:2px;
+}
+
+@utility button-tertiary{
+  color:var(--primary)
+}
 
 body {
   background: var(--background);
