@@ -5,7 +5,6 @@
   --foreground:#050029;
   --primary:#0C007A;
   --secondary:#ADA6E8;
-
 }
 
 @theme inline {
@@ -24,8 +23,16 @@
   /* Tamaños */
   --text-display: clamp(1rem, calc(2rem + 4dvw), 9rem);
 }
+
+[data-theme='dark'] {
+  --background:#290000;
+  --foreground:#F7EBDF;
+  --primary:#FF8D85;
+  --secondary:#A30000;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

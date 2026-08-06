@@ -3,26 +3,27 @@ import { Cinzel, Cinzel_Decorative, Marcellus, Cormorant_Garamond } from "next/f
 import "./globals.css";
 import Header from "@/shared/layout/Header";
 import Footer from "@/shared/layout/Footer";
+import Provider from "@/shared/layout/Provider";
 
 
 const cinzel = Cinzel({
-  variable:"--font-headings",
-  subsets:["latin"]
+  variable: "--font-headings",
+  subsets: ["latin"]
 })
 
 const cinzelDecorative = Cinzel_Decorative({
-  variable:"--font-display",
+  variable: "--font-display",
   weight: "400",
-  subsets:["latin"]
+  subsets: ["latin"]
 })
 const marcellus = Marcellus({
-  variable:"--font-ui",
+  variable: "--font-ui",
   weight: "400",
-  subsets:["latin"]
+  subsets: ["latin"]
 })
 const cormorantGaramond = Cormorant_Garamond({
-  variable:"--font-body",
-  subsets:["latin"]
+  variable: "--font-body",
+  subsets: ["latin"]
 })
 
 export const metadata: Metadata = {
@@ -36,13 +37,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`flex flex-col min-h-dvh relative ${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
+        className={`${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
       >
-        <Header/>
-        {children}
-        <Footer/>
+        <Provider>
+          <div className="relative flex flex-col min-h-dvh  ">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Provider>
       </body>
     </html>
   );
