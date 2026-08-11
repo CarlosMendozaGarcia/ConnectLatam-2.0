@@ -13,7 +13,7 @@ export default function TutorialView({ name, logo, tag }: TutorialViewProps) {
         <Image src={logo} alt={`Logo of ${name}`} width={100} height={100} />
       </div>
       <div className="flex flex-col items-center ">
-        <p className="font-titles font-bold text-primary">{name}</p>
+        <h2 className="font-titles font-bold text-primary text-headings-sm">{name}</h2>
         <p className="w-fit font-ui text-sm bg-secondary text-foreground rounded-full px-2 py-0.5 ">{tag}</p>
       </div>
     </div>
