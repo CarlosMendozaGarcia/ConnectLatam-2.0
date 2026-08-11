@@ -14,8 +14,8 @@ const tutorials = [
 
 export default function Page() {
   return (
-    <div className="flex-1 border-2 mt-[10dvh] ">
-      <div className="flex flex-col md:grid md:grid-cols-5 gap-4 overflow-y-scroll ">
+    <div className="flex-1 w-full min-h-full ">
+      <div className="flex flex-col md:grid md:grid-cols-5 gap-4 ">
         {tutorials.map((t) => (
             <TutorialView  key={t.id} name={t.name} logo={t.logo} tag={t.tag} />
         ))}
