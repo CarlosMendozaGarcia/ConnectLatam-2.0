@@ -46,9 +46,9 @@ export default function RootLayout({
         className={`${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
       >
         <Provider>
-          <div className="relative flex flex-col h-dvh">
+          <div className="flex flex-col h-dvh">
             <Header />
-            <main className="flex-1">
+            <main className="flex-1 overflow-y-auto">
               {children}
             </main>
             <Footer />

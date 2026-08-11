@@ -1,21 +1,22 @@
 import NavBar from "../components/NavBar";
 import ThemeButton from "../components/ThemeButton";
-
+import Logo from "../../public/Logo.svg";
+import MenuButton from "../components/MenuButton";
 export default function Header() {
   return (
-    <header className=" h-[10dvh] w-full shrink-0 z-10 px-4">
+    <header className="relative top-0 h-[10dvh] w-full shrink-0 z-10 px-4 bg-linear-to-b from-background from-80% to-transparent ">
       <div className="hidden lg:grid lg:grid-cols-3 lg:items-center h-full w-full">
-        <div></div>
+        <Logo className="h-full w-auto fill-primary"/>
         <NavBar />
         <div className="justify-self-end">
           <ThemeButton />
         </div>
       </div>
       <div className="flex justify-between items-center h-full w-full lg:hidden ">
-        <div>Logo</div>
+        <Logo className="h-full w-auto fill-primary"/>
         <div className="flex gap-3 items-center ">
           <ThemeButton />
-          <div>Menu</div>
+          <MenuButton />
         </div>
       </div>
     </header>
