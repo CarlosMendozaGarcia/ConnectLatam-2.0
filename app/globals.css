@@ -28,7 +28,7 @@
   --font-body: var(--font-body);
 
   /* Tamaños */
-  --text-display: clamp(1rem, calc(2rem + 4dvw), 9rem);
+  --text-display: clamp(1rem, calc(1.5rem + 4dvw), 9rem);
 }
 
 
