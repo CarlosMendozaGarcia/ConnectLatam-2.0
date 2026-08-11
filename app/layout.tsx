@@ -1,29 +1,34 @@
 import type { Metadata } from "next";
-import { Cinzel, Cinzel_Decorative, Marcellus, Cormorant_Garamond } from "next/font/google";
+import {
+  Cinzel,
+  Cinzel_Decorative,
+  Marcellus,
+  Cormorant_Garamond,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/shared/layout/Header";
 import Footer from "@/shared/layout/Footer";
 import Provider from "@/shared/layout/Provider";
 
-
-const cinzel = Cinzel({
-  variable: "--font-headings",
-  subsets: ["latin"]
-})
 const cinzelDecorative = Cinzel_Decorative({
   variable: "--font-display",
   weight: "400",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-body",
+  subsets: ["latin"],
+});
+
+const cinzel = Cinzel({
+  variable: "--font-titles",
+  subsets: ["latin"],
+});
 const marcellus = Marcellus({
   variable: "--font-ui",
   weight: "400",
-  subsets: ["latin"]
-})
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-body",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Connect Latam VT",
@@ -41,7 +46,7 @@ export default function RootLayout({
         className={`${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
       >
         <Provider>
-          <div className="relative flex flex-col min-h-dvh  ">
+          <div className="relative flex flex-col min-h-dvh">
             <Header />
             {children}
             <Footer />
