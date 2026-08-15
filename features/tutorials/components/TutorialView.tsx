@@ -9,7 +9,7 @@ type TutorialViewProps = {
 export default function TutorialView({ tutorial }: TutorialViewProps) {
   return (
     <Link href={`/tutorials/${tutorial.slug}`}className="flex flex-row md:flex-col items-center justify-between md:justify-center text-center border-2 border-foreground rounded-xl px-4 py-2 md:p-2">
-      <div className="w-auto h-auto rounded-xl overflow-hidden">
+      <div className=" rounded-xl overflow-hidden">
         <Image src={tutorial.logo} alt={`Logo of ${tutorial.appName}`} width={100} height={100} />
       </div>
       <div className="flex flex-col items-center ">
