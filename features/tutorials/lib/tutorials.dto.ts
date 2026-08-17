@@ -5,5 +5,6 @@ export type Tutorial= {
     logo: string,
     type: "Comeback"
     description?: string,
-    tutorials?: string[]
+    basePhotos: string,
+    steps: number;
 }
