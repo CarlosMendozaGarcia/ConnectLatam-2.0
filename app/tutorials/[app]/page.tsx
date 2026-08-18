@@ -19,9 +19,10 @@ export async function generateMetadata({
   const { app } = await params;
   const tutorial = await getTutorialByApp(app);
   if (!tutorial) return {};
-  return { 
-    title: `${tutorial.appName} tutorial`, 
-    description: tutorial.description ?? `Tutorial para ${tutorial.appName}`};
+  return {
+    title: `${tutorial.appName} tutorial`,
+    description: tutorial.description ?? `Tutorial para ${tutorial.appName}`
+  };
 }
 export default async function TutorialPage({
   params,
@@ -42,20 +43,22 @@ export default async function TutorialPage({
   };
 
   return (
-    <div className="flex flex-col h-full w-full max-w-2xl overflow-hidden mx-auto gap-8 px-4 py-8 border-2 ">
-      <div className="border-2 border-red-500">
-        <h1>{tutorial.appName}</h1>
-        <h2>descripción</h2>
-        <p>{tutorial.description}</p>
-      </div>
-      <div className="h-full border-2 border-green-500">
+    <div className="flex flex-col h-full w-full max-w-2xl overflow-hidden mx-auto gap-4 px-4 py-8">
+      <h1 className="font-titles text-headings-md text-primary font-bold">{tutorial.appName}</h1>
+      <div className="h-full ">
         <Carrousel modules={["Autoplay", "Navigation"]}>
           {stepsTutorial().map((m) => (
-            <div key={m.id} className="relative w-full h-full border-2 border-yellow-500 ">
+            <div key={m.id} className="relative w-full h-full rounded-xl overflow-hidden ">
               <Image
                 src={m.src}
                 alt={`Tutorial ${tutorial.appName} paso ${m.id}`}
-                className="object-contain"
+                className="object-cover opacity-30"
+                fill
+              />
+              <Image
+                src={m.src}
+                alt={`Tutorial ${tutorial.appName} paso ${m.id}`}
+                className="object-contain backdrop-blur-xs "
                 fill
               />
             </div>

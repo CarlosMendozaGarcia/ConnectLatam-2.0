@@ -17,7 +17,7 @@ export default async  function Page() {
 
   return (
     <div className="flex-1 min-h-full w-full p-4">
-      <div className="flex flex-col md:grid md:grid-cols-5 gap-4 ">
+      <div className="flex flex-col md:grid md:grid-cols-[repeat(auto-fill,minmax(150px,1fr))]  gap-4 ">
         {tutorials.map((t) => (
             <TutorialView  key={t.id} tutorial={t} />
         ))}
