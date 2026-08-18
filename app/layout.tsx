@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     default: "Connect Latam VT"
   },
   description: "Sitio web dedicado a la obtención de votos y logros para la agrupación coreana (Kpop) Enhypen",
+  verification: {
+    google: "50s_NynfX-QlZsFzluFXxb1rCo7HGKo19XchH-mOBQA",
+  },
   openGraph: {
     title: {
       template: "%s | Connect Latam VT",
@@ -53,6 +56,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="50s_NynfX-QlZsFzluFXxb1rCo7HGKo19XchH-mOBQA" />
+      </head>
       <body
         className={`${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
       >
