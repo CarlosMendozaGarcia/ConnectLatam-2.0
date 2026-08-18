@@ -19,7 +19,9 @@ export async function generateMetadata({
   const { app } = await params;
   const tutorial = await getTutorialByApp(app);
   if (!tutorial) return {};
-  return { title: tutorial.appName, description: tutorial.description };
+  return { 
+    title: `${tutorial.appName} tutorial`, 
+    description: tutorial.description ?? `Tutorial para ${tutorial.appName}`};
 }
 export default async function TutorialPage({
   params,
@@ -47,7 +49,7 @@ export default async function TutorialPage({
         <p>{tutorial.description}</p>
       </div>
       <div className="h-full border-2 border-green-500">
-        <Carrousel modules={["Autoplay","Navigation"]}>
+        <Carrousel modules={["Autoplay", "Navigation"]}>
           {stepsTutorial().map((m) => (
             <div key={m.id} className="relative w-full h-full border-2 border-yellow-500 ">
               <Image

@@ -1,6 +1,15 @@
+import { Metadata } from "next";
 import TutorialView from "@/features/tutorials/components/TutorialView";
 import { getAllTutorials } from "@/features/tutorials/lib/services";
 
+export const metadata: Metadata = {
+  title: "Tutoriales",
+  description: "Encuentra nuestro catalogo de tutoriales para la recolección de votos para comebacks, apps generales, etc ",
+  openGraph: {
+    title:"Tutoriales",
+    description: "Encuentra nuestro catalogo de tutoriales para la recolección de votos para comebacks, apps generales, etc ",
+  }
+}
 
 export default async  function Page() {
 

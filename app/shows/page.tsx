@@ -1,3 +1,14 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Shows musicales",
+  description: "Encuentra información sobre los shows musicales que importan para proximas votaciones y/o comebacks para Enhypen",
+  openGraph: {
+    title:"Shows musicales",
+    description: "Encuentra información sobre los shows musicales que importan para proximas votaciones y/o comebacks para Enhypen",
+  }
+}
+
 export default function Page() {
     return <div className="h-full w-full flex flex-col overflow-hidden p-10">
         <div className="h-full w-full border-2 flex flex-col lg:flex-row justify-between">

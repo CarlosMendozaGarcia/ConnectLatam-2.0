@@ -8,9 +8,6 @@ export type Account = {
 }
 
 export const accounts: Account[] = [
-{ name: "CONNECT LATAM VT",
-    socialMedias: [{ name:"X", user:"connect_latamvt"},{ name:"Instagram", user:"connectlatam_vt"}]
-},
 { name: "ENGENE CHILE",
     socialMedias: [{ name:"X", user:"EngeneChile"},{ name:"Instagram", user:"Engene.chile_"}]
 },

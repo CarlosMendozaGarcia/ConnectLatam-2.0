@@ -1,3 +1,17 @@
+import { Metadata } from "next";
+
+import X from "@/public/X.svg";
+import Ig from "@/public/Instagram.svg";
+import Email from "@/public/Email.svg";
+
+export const metadata: Metadata = {
+  title: "Sobre nosotros",
+  description: "Encuentra mas información sobre Connect Latam VT, nuestra visión, misión y principales aliados",
+  openGraph: {
+    title:"Sobre nosotros",
+    description: "Encuentra mas información sobre Connect Latam VT, nuestra visión, misión y principales aliados",
+  }
+}
 
 export default function Page() {
   return (
@@ -21,11 +35,31 @@ export default function Page() {
       <div className="flex flex-col gap-4 max-w-2xl ">
         <h2 className="font-titles font-semibold text-headings-lg text-primary">Contactanos</h2>
         <div className="flex flex-col gap-4 ">
-            <div className="size-10 button-primary"/>
-            <div className="size-10 button-primary"/>
-            <div className="size-10 button-primary"/>
+          <div className="flex items-center gap-2 font-body text-headings-sm">
+            <div className="size-10 button-tertiary">
+              <X/>
+            </div>
+            <p>@connect_latamvt</p>
+          </div>
+          <div className="flex items-center gap-2 font-body text-headings-sm">
+            <div className="size-10 button-tertiary">
+              <Ig/>
+            </div>
+            <p>@connectlatam_vt</p>
+          </div>
+          <div className="flex items-center gap-2 font-body text-headings-sm">
+            <div className="size-10 button-tertiary">
+              <Email/>
+            </div>
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
+/* 
+{ name: "CONNECT LATAM VT",
+    socialMedias: [{ name:"X", user:""},{ name:"Instagram", user:""}]
+}, */
