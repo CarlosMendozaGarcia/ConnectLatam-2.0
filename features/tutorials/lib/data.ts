@@ -9,5 +9,5 @@ export const Tutorials: Tutorial[] = [
     { id: 6, slug: "mubeat", appName: "Mubeat", logo: "/Mubeat.webp", type: "Comeback", basePhotos:"/tutoriales/Mubeat/Step_", steps:2   },
     { id: 7, slug: "muniverse", appName: "Muniverse", logo: "/Muniverse.webp", type: "Comeback", basePhotos:"/tutoriales/Muniverse/Step_", steps:4   },
     { id: 8, slug: "idolchamp", appName: "Idolchamp", logo: "/Idolchamp.webp", type: "Comeback", basePhotos:"/tutoriales/Idolchamp/Step_", steps:3   },
-    { id: 9, slug: "coogong", appName: "Coogoong", logo: "/Coogoong.webp", type: "Comeback", basePhotos:"/tutoriales/Coogoong/Step_", steps:6   },
+    { id: 9, slug: "coogong", appName: "Coogoong", logo: "/Coogoong.webp", type: "Comeback", basePhotos:"/tutoriales/Coogoong/Step_", steps:5   },
 ]
