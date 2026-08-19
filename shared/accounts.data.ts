@@ -9,6 +9,11 @@ export type Account = {
 }
 
 export const accounts: Account[] = [
+    { name: "Engene Colombia",
+        socialMedias: [{name:"TikTok", user:"@engenecolombia"},{name:"Instagram", user:"@engenecolombia"}],
+        logo:"/logos/EngeneColombia.svg"
+
+    },
 { name: "ENGENE CHILE",
     socialMedias: [{ name:"X", user:"EngeneChile"},{ name:"Instagram", user:"Engene.chile_"}],
     logo:"/logos/EngeneChile.svg"
