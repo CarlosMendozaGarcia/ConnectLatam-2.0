@@ -8,7 +8,7 @@ export default function ShowViewList() {
     const [toggle, setToggle] = useState(0)
 
   return (
-    <div className="h-full w-full border-2 flex flex-col lg:flex-row justify-between">
+    <div className="h-full w-full  flex flex-col lg:flex-row justify-between">
       <div
         onClick= {() => setToggle(0)}
         className={`flex flex-col text-background ${toggle == 0? "flex-6" : "flex-0.5 md:flex-1"}  bg-primary transition-[flex] duration-300 group`}
