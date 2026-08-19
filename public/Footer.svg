@@ -1,6 +1,6 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441 422" >
 	<style>
-		.s0 { opacity:0.2 ;fill: currentColor } 
+		.s0 { brightness:100 ; opacity:0.5 ;fill: currentColor } 
 		.s1 { opacity:0.9 ;fill: currentColor } 
 	</style>
 	<g id="Background">
