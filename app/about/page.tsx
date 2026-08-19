@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="flex-1 flex flex-col gap-16 items-center text-center min-h-full w-full px-4 py-8">
+    <div className="flex-1 flex flex-col gap-16 items-center text-center min-h-full w-full px-4 py-8 ">
       <div className="flex flex-col gap-4 max-w-2xl w-full">
         <h1 className="font-titles font-semibold text-headings-lg text-primary">
           {" "}

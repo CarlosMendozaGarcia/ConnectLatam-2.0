@@ -65,7 +65,7 @@ export default function RootLayout({
         <Provider>
           <div className="flex flex-col h-dvh">
             <Header />
-            <main className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain pb-[10dvh]">
+            <main className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain pb-[7dvh]">
               {children}
             </main>
             <Footer />
