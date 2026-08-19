@@ -1,10 +1,13 @@
+
 export type Link = {
     slug:string,
-    name:string;
+    key:string;
 }
+
+
 export const MenuItems: Link[] = [
-    {slug:"", name:"Home"},
-    {slug:"tutorials", name:"Tutoriales"},
-    {slug:"shows", name:"Shows musicales"},
-    {slug:"about", name:"Sobre nosotros"},
+    {slug:"", key:"Home"},
+    {slug:"tutorials", key:"Tutorials"},
+    {slug:"shows", key:"Shows"},
+    {slug:"about", key:"AboutUs"},
 ]

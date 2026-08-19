@@ -1,5 +1,9 @@
+import { getTranslations } from "next-intl/server";
+
 import Foot from "@/public/Footer.svg";
-export default function Footer() {
+
+export default async function Footer() {
+  const t = await getTranslations("Footer");
   return (
     <footer className="z-10 relative flex items-center justify-center shrink-0 h-[5dvh] w-full bg-primary  shadow-lg/50 shadow-secondary">
       <div
@@ -16,7 +20,7 @@ export default function Footer() {
         }}
       ></div>
       <p className=" text-headings-sm font-ui text-background">
-        Developed by OrionByPixel
+        {t("Title")}: OrionByPixel
       </p>
     </footer>
   );

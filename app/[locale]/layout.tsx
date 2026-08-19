@@ -1,11 +1,12 @@
-//
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from 'next-intl';
 import {
   Cinzel,
   Cinzel_Decorative,
   Marcellus,
   Cormorant_Garamond,
 } from "next/font/google";
+
 import "./globals.css";
 import Header from "@/shared/layout/Header";
 import Footer from "@/shared/layout/Footer";
@@ -62,15 +63,17 @@ export default function RootLayout({
       <body
         className={`${cinzel.variable} ${cinzelDecorative.variable} ${marcellus.variable} ${cormorantGaramond.variable}  antialiased`}
       >
-        <Provider>
-          <div className="flex flex-col h-dvh">
-            <Header />
-            <main className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain pb-[7dvh]">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </Provider>
+        <NextIntlClientProvider>
+          <Provider>
+            <div className="flex flex-col h-dvh">
+              <Header />
+              <main className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain pb-[7dvh]">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </Provider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

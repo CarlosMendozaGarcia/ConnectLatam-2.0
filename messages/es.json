@@ -1,0 +1,39 @@
+{
+    "Home":{
+        "Title": "Bienvenidos a \n Connect Latam VT"
+    },
+    "NotFound":{
+        "Title":"La pagina se ha \n desvanecido",
+        "Subtitle":"Entre estas páginas solo quedan sombras.",
+        "Cta":"Quizás sea hora de regresar..."
+    },
+    "NavBar": {
+        "Home":"Home",
+        "Tutorials":"Tutoriales",
+        "Shows":"Shows musicales",
+        "AboutUs":"Sobre nosotros"
+    },
+    "Footer": {
+        "Title":"Desarrollado por"
+    },
+    "AboutUs":{
+        "About":{
+            "Title":"Sobre nosotros",
+            "Text":"CONNECT LATAM VT nace como una red de colaboración entre fanbases y fan accounts de Latinoamérica con el propósito de unificar esfuerzos, compartir información confiable y coordinar estrategias de votación que permitan maximizar el apoyo de la región en cada comeback, premiación y actividad oficial."
+        },
+        "Mision":{
+            "Title":"Misión",
+            "Text":"CONNECT LATAM VT busca centralizar la información relacionada con las votaciones, facilitar la coordinación entre fanbases y fan accounts de la región, y promover estrategias conjuntas que permitan optimizar la participación del fandom latinoamericano."
+        },
+        "Vision":{
+            "Title":"Visión",
+            "Text":"El propósito del proyecto es fortalecer la forma en que la región participa. Una comunidad organizada puede tomar mejores decisiones, utilizar sus recursos de manera más eficiente y responder con mayor rapidez a los objetivos de cada campaña de votación. CONNECT LATAM VT responde a esa necesidad de coordinación, convirtiéndose en un espacio de colaboración sin ánimo de lucro donde el trabajo conjunto permite potenciar el impacto del apoyo latino hacia ENHYPEN."
+        },
+        "Members":{
+            "Title":"Miembros de la alianza"
+        },
+        "ContactUs":{
+            "Title":"Contactanos"
+        }
+    }
+}
