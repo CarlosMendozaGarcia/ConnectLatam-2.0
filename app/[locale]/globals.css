@@ -40,13 +40,13 @@
 @utility button-primary{
   background: var(--primary);
   color: var(--background);
-  border-radius: 2px;
+  border-radius: 6px;
 }
 
 @utility button-secondary{
   color: var(--primary);
   border: 2px solid;
-  border-radius:2px;
+  border-radius:6px;
 }
 
 @utility button-tertiary{

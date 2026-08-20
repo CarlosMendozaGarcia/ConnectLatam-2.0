@@ -19,7 +19,7 @@ export default async function Footer() {
           WebkitMaskPosition: "center",
         }}
       ></div>
-      <p className=" text-headings-sm font-ui text-background">
+      <p className=" text-body font-ui text-background">
         {t("Title")}: OrionByPixel
       </p>
     </footer>

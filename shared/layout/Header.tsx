@@ -10,7 +10,7 @@ export default function Header() {
       <div className="hidden lg:grid lg:grid-cols-[1fr_2fr_1fr] lg:items-center h-full w-full">
         <Logo className="h-full w-auto fill-primary"/>
         <NavBar />
-        <div className="justify-self-end">
+        <div className="flex gap-2 items-center justify-self-end font-ui">
           <LanguagueButton/>
           <ThemeButton />
         </div>
@@ -19,6 +19,7 @@ export default function Header() {
         <Logo className="h-full w-auto fill-primary"/>
         <div className="flex gap-3 items-center ">
           <ThemeButton />
+          <LanguagueButton/>
           <MenuButton />
         </div>
       </div>

@@ -1,10 +1,20 @@
-import Link from "next/link"
+'use client';
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
-export default async function LanguagueButton(){
+export default function LanguagueButton(){
+    const router = useRouter();
+    const pathname = usePathname();
+    const locale = useLocale();
 
-    return<div className="flex gap-2 border-2">
-        <Link href="/es">ES</Link>
-        <Link href="/pt">PT</Link>
-    </div>
+    const nextLocale= locale === "es" ? "pt":"es";
+    
+    const handleClick = () => {
+        router.replace(pathname, {locale: nextLocale});
+    }
+
+    return <button onClick={handleClick} className="button-secondary px-2 py-0.5 uppercase">
+        {nextLocale}
+    </button>
 
 }

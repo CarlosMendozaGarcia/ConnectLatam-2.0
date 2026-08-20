@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
 import Carrousel from "@/shared/components/Carrousel";
 import { accounts } from "@/shared/accounts.data";
+
 import X from "@/public/X.svg";
 import Ig from "@/public/Instagram.svg";
 import Email from "@/public/Email.svg";
@@ -18,54 +20,38 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export default async  function Page() {
+  const t = await getTranslations("AboutUs")
   return (
     <div className="flex-1 flex flex-col gap-16 items-center text-center min-h-full w-full px-4 py-8 ">
       <div className="flex flex-col gap-4 max-w-2xl w-full">
         <h1 className="font-titles font-semibold text-headings-lg text-primary">
-          {" "}
-          Sobre nosotros
+          {t("About.Title")}
         </h1>
         <p className="text-body font-body">
-          <span className="text-primary font-bold">CONNECT LATAM VT</span> nace
-          como una red de colaboración entre fanbases y fan accounts de
-          Latinoamérica con el propósito de unificar esfuerzos, compartir
-          información confiable y coordinar estrategias de votación que permitan
-          maximizar el apoyo de la región en cada comeback, premiación y
-          actividad oficial.
+          {t("About.Text")}
         </p>
       </div>
       <div className="flex flex-col gap-4 max-w-2xl w-full">
         <h2 className="font-titles font-semibold text-headings-lg text-primary">
-          Mision
+          {t("Mision.Title")}
         </h2>
         <p className="text-body font-body">
-          <span className="text-primary font-bold">CONNECT LATAM VT</span> busca
-          centralizar la información relacionada con las votaciones, facilitar
-          la coordinación entre fanbases y fan accounts de la región, y promover
-          estrategias conjuntas que permitan optimizar la participación del
-          fandom latinoamericano.
+          {t("Mision.Text")}
         </p>
       </div>
       <div className="flex flex-col gap-4 max-w-2xl w-full">
         <h2 className="font-titles font-semibold text-headings-lg text-primary">
-          Visión
+          {t("Vision.Title")}
         </h2>
         <p className="text-body font-body">
-          El propósito del proyecto es fortalecer la forma en que la región
-          participa. Una comunidad organizada puede tomar mejores decisiones,
-          utilizar sus recursos de manera más eficiente y responder con mayor
-          rapidez a los objetivos de cada campaña de votación.{" "}
-          <span className="text-primary font-bold">CONNECT LATAM VT</span>{" "}
-          responde a esa necesidad de coordinación, convirtiéndose en un espacio
-          de colaboración sin ánimo de lucro donde el trabajo conjunto permite
-          potenciar el impacto del apoyo latino hacia{" "}
+          {t("Vision.Text")}
           <span className="text-primary font-bold">ENHYPEN.</span>
         </p>
       </div>
       <div className="flex flex-col gap-4 max-w-2xl w-full ">
         <h2 className="font-titles font-semibold text-headings-lg text-primary">
-          Miembros de alianza
+          {t("Members.Title")}
         </h2>
         <div className="w-full ">
           <Carrousel modules={["Autoplay", "Navigation"]} loop={true} spaceBetween={10}>
@@ -91,7 +77,7 @@ export default function Page() {
       </div>
       <div className="flex flex-col gap-4 max-w-2xl ">
         <h2 className="font-titles font-semibold text-headings-lg text-primary">
-          Contactanos
+          {t("ContactUs.Title")}
         </h2>
         <div className="flex flex-col gap-4 ">
           <div className="flex items-center gap-2 font-body text-headings-sm">
