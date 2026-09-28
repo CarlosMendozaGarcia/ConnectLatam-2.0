@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing';
 
-const host = "https://connectlatamvt.vercel.app";
+const host = "https://connectlatamvt.com";
 const routes = [
   { path: "", priority: 1.0 },
   { path: "tutorials", priority: 0.8 },
