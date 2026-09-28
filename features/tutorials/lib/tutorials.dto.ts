@@ -3,7 +3,7 @@ export type Tutorial= {
     slug: string,
     appName: string,
     logo: string,
-    type: "Comeback"
+    type: "Comeback" | "Especial"
     description?: string,
     basePhotos: string,
     steps: number;
