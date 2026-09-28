@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import {
   Cinzel,
@@ -74,6 +75,7 @@ export default function RootLayout({
             </div>
           </Provider>
         </NextIntlClientProvider>
+        <Analytics/>
       </body>
     </html>
   );
